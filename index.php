@@ -2,9 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use Bramus\Router\Router;
-
-$router = new Router();
+$router = new \Bramus\Router\Router();
 
 $router->get('/hello', "helloWorld");
 $router->get('/about', function($name) {
