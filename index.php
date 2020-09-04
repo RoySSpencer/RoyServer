@@ -7,7 +7,9 @@ use Bramus\Router\Router;
 $router = new Router();
 
 $router->get('/hello', "helloWorld");
-$router->get('/about', "helloWorld");
+$router->get('/about', function($name) {
+    echo 'About Page Contents';
+});
 
 $router->run();
 
