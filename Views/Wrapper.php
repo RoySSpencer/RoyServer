@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assests/css/wrapper.css">
+<link rel="stylesheet" href="/RoyServer/assests/css/wrapper.css">
 <?php
 
 class Wrapper {
