@@ -16,7 +16,7 @@ $(document).ready( function () {
 } );
 </script>
 
-<table id="table_id" class="display">
+<!-- <table id="table_id" class="display">
     <thead>
         <tr>
             <th>Column 1</th>
@@ -33,12 +33,16 @@ $(document).ready( function () {
             <td>Row 2 Data 2</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 </div>
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
+require_once "Views/Wrapper.php";
+
+$wrapper = new Wrapper();
+$wrapper->header();
 
 $router = new \Bramus\Router\Router();
 
