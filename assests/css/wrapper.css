@@ -1,4 +1,15 @@
-heading {
+#header {
     background-color:#82002f; 
-    color:whitesmoke; padding:15px 25px;
+    color:whitesmoke; 
+    padding:15px 25px;
+}
+
+#body {
+    padding: 10px 25px;
+    background-color: tan;
+}
+
+#body-container {
+    padding: 10px 25px;
+    background-color: white;
 }

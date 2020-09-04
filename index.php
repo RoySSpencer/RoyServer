@@ -38,6 +38,8 @@ function helloWorld() {
     echo "hello world test pull";
 }
 
+$wrapper->bodyStart();
+
 ?>
 
 <table id="table_id" class="display">
@@ -58,3 +60,7 @@ function helloWorld() {
         </tr>
     </tbody>
 </table>
+
+<?php
+$wrapper->bodyEnd();
+?>
