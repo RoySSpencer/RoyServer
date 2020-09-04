@@ -5,10 +5,15 @@ class Wrapper {
     public function header() {
         ?>
         <heading>
-            <div id="header">
+            <!-- <div id="header"> -->
                 <h1>Roy Spencer -- Testing</h1>
-            </div>
+            <!-- </div> -->
         </heading>
+        <?php
+    }
+    public function bodyStart() {
+        ?>
+        <!-- <div id="body"> -->
         <?php
     }
 }
