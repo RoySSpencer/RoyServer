@@ -23,8 +23,13 @@ require __DIR__ . '/vendor/autoload.php';
 require_once "Views/Wrapper.php";
 
 $wrapper = new Wrapper();
-$wrapper->header("Roy Spencer -- Test");
+$wrapper->header("Roy Spencer -- Project List");
 $wrapper->bodyStart();
+
+$projects = array(
+    "test" => "<a href='/test'>test link</a>"
+);
+ProjectTable($projects);
 
 $router = new \Bramus\Router\Router();
 
@@ -39,27 +44,26 @@ function helloWorld() {
     echo "hello world test pull";
 }
 
-?>
-
-<table id="table_id" class="display">
-    <thead>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Row 1 Data 1</td>
-            <td>Row 1 Data 2</td>
-        </tr>
-        <tr>
-            <td>Row 2 Data 1</td>
-            <td>Row 2 Data 2</td>
-        </tr>
-    </tbody>
-</table>
-
-<?php
 $wrapper->bodyEnd();
-?>
+
+
+function ProjectTable($projects) {
+    ?>
+    <table id="table_id" class="display">
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($projects as $key => $val): ?>
+            <tr>
+                <td><?=$key?></td>
+                <td><?=$val?></td>
+            </tr>
+            <?php endfor; ?>
+        </tbody>
+    </table>
+    <?php
+}
