@@ -45,6 +45,7 @@ function helloWorld() {
 }
 
 $wrapper->bodyEnd();
+$wrapper->footer();
 
 
 function ProjectTable($projects) {
