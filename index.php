@@ -33,8 +33,8 @@ ProjectTable($projects);
 
 $router = new \Bramus\Router\Router();
 
-$router->get('/', "helloWorld");
-$router->get('/test', "helloWorld");
+// $router->get('/', "helloWorld");
+$router->get('/RoyServer/test', "helloWorld");
 $router->get('/about', function($name) {
     echo 'About Page Contents';
 });
