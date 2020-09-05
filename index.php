@@ -27,7 +27,7 @@ $wrapper->header("Roy Spencer -- Project List");
 $wrapper->bodyStart();
 
 $projects = array(
-    "test" => "<a href='/test'>test link</a>"
+    "test" => "<a href='/RoyServer/test'>test link</a>"
 );
 ProjectTable($projects);
 
