@@ -25,10 +25,10 @@ class Wrapper {
 
     public function footer() {
         ?>
-        <footer>
+        <div class='footer'>
             <p>Author: Roy Spencer</p>
             <p>Class: CSC-410</p>
-        </footer>
+        </div>
         <?php
     }
 }
