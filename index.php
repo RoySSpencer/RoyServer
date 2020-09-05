@@ -62,7 +62,7 @@ function ProjectTable($projects) {
                 <td><?=$key?></td>
                 <td><?=$val?></td>
             </tr>
-            <?php endfor; ?>
+            <?php endforeach; ?>
         </tbody>
     </table>
     <?php
