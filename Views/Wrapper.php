@@ -2,10 +2,10 @@
 <?php
 
 class Wrapper {
-    public function header() {
+    public function header($title) {
         ?>
         <div id="header">
-            <h1>Roy Spencer -- Testing</h1>
+            <h1><?=$title?></h1>
         </div>
         <?php
     }

@@ -23,7 +23,8 @@ require __DIR__ . '/vendor/autoload.php';
 require_once "Views/Wrapper.php";
 
 $wrapper = new Wrapper();
-$wrapper->header();
+$wrapper->header("Roy Spencer -- Test");
+$wrapper->bodyStart();
 
 $router = new \Bramus\Router\Router();
 
@@ -37,8 +38,6 @@ $router->run();
 function helloWorld() {
     echo "hello world test pull";
 }
-
-$wrapper->bodyStart();
 
 ?>
 
