@@ -18,3 +18,12 @@ body {
     padding: 10px 25px;
     background-color: white;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+}
