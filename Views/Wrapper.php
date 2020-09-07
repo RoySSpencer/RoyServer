@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="/RoyServer/assests/css/wrapper.css">
 <?php
 
 class Wrapper {
     public function header($title) {
         ?>
+        <link rel="stylesheet" href="/assets/css/wrapper.css">
         <div id="header">
             <h1><?=$title?></h1>
         </div>
