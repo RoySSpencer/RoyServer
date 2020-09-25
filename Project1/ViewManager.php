@@ -3,6 +3,7 @@
 namespace Project1;
 
 USE \Views\Wrapper;
+USE \Project1\Warehouse;
 
 class ViewManager {
     public function router() {
@@ -12,6 +13,7 @@ class ViewManager {
         $wrapper->header("Roy Spencer -- Project List");
         $wrapper->bodyStart();
 
+        new Warehouse();
         echo "hi";
 
         $wrapper->bodyEnd();

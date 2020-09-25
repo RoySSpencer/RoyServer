@@ -56,21 +56,6 @@ function helloWorld() {
     $wrapper->footer();
 }
 
-function project1() {
-
-    linkHeader();
-    $wrapper = new Wrapper();
-    $wrapper->header("Roy Spencer -- Project List");
-    $wrapper->bodyStart();
-
-    $viewManager = new ViewManager();
-
-    $viewManager->router();
-
-    $wrapper->bodyEnd();
-    $wrapper->footer();
-}
-
 
 
 
