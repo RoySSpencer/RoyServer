@@ -33,7 +33,7 @@ class Authentication {
         $this->input("username", "Username");
         $this->input("password", "Password");
 
-        $this->button();
+        $this->button("sign-in", "Submit");
         ?>
         </form>
         <?php
@@ -59,7 +59,7 @@ class Authentication {
     public function button($id, $name) {
         ?>
         <div class="row">
-            <button type="button">Submit</button>
+            <button type="submit" id="<?=$id?>">"<?=$name?>"</button>
 
         </div>
         <?php
