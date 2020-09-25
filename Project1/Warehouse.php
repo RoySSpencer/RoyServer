@@ -6,8 +6,8 @@ class Warehouse{
 
     public function __construct() {
         $servername = "localhost";
-        $username = "root";
-        $password = "testing";
+        $username = "roy";
+        $password = "toyroy";
 
         // Create connection
         $conn = new mysqli($servername, $username, $password);
