@@ -47,7 +47,7 @@ function helloWorld() {
     $wrapper->bodyStart();
 
     $projects = array(
-        "Project 1" => "<a href='/RoyServer/P1'>Project1Link</a>"
+        "Project 1" => "<a href='/P1'>Project1Link</a>"
     );
     ProjectTable($projects);
 
