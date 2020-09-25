@@ -9,13 +9,13 @@ class ViewManager {
 
         linkHeader();
         $wrapper = new Wrapper();
-        // $wrapper->header("Roy Spencer -- Project List");
-        // $wrapper->bodyStart();
+        $wrapper->header("Roy Spencer -- Project List");
+        $wrapper->bodyStart();
 
         echo "hi";
 
-        // $wrapper->bodyEnd();
-        // $wrapper->footer();
+        $wrapper->bodyEnd();
+        $wrapper->footer();
         
         
     }
