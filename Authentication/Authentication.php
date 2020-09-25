@@ -29,15 +29,17 @@ class Authentication {
         $this->input();
     }
 
-    public function input() {
+    public function input($id = "test") {
         ?>
         <div class="row">
             <div class="col-md-4">
-                Username:
+                <label for="<?=$id?>">
+                    Username:
+                </label>
             </div>
 
             <div class="col-md-8">
-                <input type="text" id="id" name="name">
+                <input type="text" id="<?=$id?>" name="<?=$id?>" style="width:100%">
             </div>
 
         </div>
