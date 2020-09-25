@@ -1,5 +1,7 @@
 <?php
 
+USE \Views\Wrapper;
+
 namespace Project1;
 
 class ViewManager {
