@@ -4,10 +4,12 @@ namespace Project1;
 
 USE \Views\Wrapper;
 USE \Project1\Warehouse;
+USE \Authentication\Authentication;
 
 class ViewManager {
     public function __construct() {
         $this->db = new Warehouse();
+        $this->Authentication = new Authentication();
     }
 
     public function router() {
@@ -18,7 +20,7 @@ class ViewManager {
         $wrapper->bodyStart();
 
         
-        if ($this->checkUser()){
+        if ($this->Authentication->checkUser()){
             echo "hi";
         }
 
@@ -26,28 +28,6 @@ class ViewManager {
         $wrapper->footer();
         
         
-    }
-
-    public function checkUser() {
-        if (isset($_SESSION['loggedIn'])){
-            if ($this->db->checkLogin()){
-                return true;
-            } else {
-                $this->getLoggin();
-                echo "wrong username or password";
-            }
-        } else {
-            $this->getLoggin();
-        } 
-
-        echo "not logged in";
-
-        return false;
-
-    }
-
-    public function getLoggin() {
-        echo "get loggin";
     }
 
 }

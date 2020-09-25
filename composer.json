@@ -6,7 +6,8 @@
     "autoload": {
         "psr-4": {
             "Project1\\": "Project1/",
-            "Views\\": "Views"
+            "Views\\": "Views",
+            "Authentication\\": "Authentication"
         }
     }
 }

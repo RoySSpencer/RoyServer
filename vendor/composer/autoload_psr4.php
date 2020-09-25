@@ -11,4 +11,5 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Project1\\' => array($baseDir . '/Project1'),
+    'Authentication\\' => array($baseDir . '/Authentication'),
 );
