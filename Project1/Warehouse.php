@@ -13,6 +13,13 @@ class Warehouse{
         // Create connection
         $conn = mysqli_connect($servername, $username, $password, $db);
 
+        $sql = "select * from Logins";
+
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_row($result);
+
+        var_dump($row);
+
         // Check connection
         // if (!$conn) {
         //     die("Connection failed: " . $conn->connect_error);
