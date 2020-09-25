@@ -5,7 +5,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Project1\\": "project1/",
+            "Project1\\": "Project1/",
             "Views\\": "Views"
         }
     }
