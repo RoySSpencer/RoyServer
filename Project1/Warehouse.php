@@ -5,20 +5,21 @@ namespace Project1;
 class Warehouse{
 
     public function __construct() {
-        // $servername = "localhost:3036";
+        $servername = "localhost";
         $username = "roy";
         $password = "toyroy";
+        $db = "Passwords";
 
         // Create connection
-        $conn = mysql_connect($username, $password);
+        $conn = mysqli_connect($servername, $username, $password, $db);
 
         // Check connection
-        if (!$conn) {
-            die("Connection failed: " . $conn->connect_error);
-        } 
-        echo "Connected successfully";
+        // if (!$conn) {
+        //     die("Connection failed: " . $conn->connect_error);
+        // } 
+        // echo "Connected successfully";
 
-        mysql_close($conn);
+        // mysql_close($conn);
         // $conn->close();
     }
     
