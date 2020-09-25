@@ -1,8 +1,8 @@
 <?php
 
 require __DIR__ . '/../vendor/autoload.php';
-require_once "../Views/Wrapper.php";
-require_once "../Project1/ViewManager.php";
+
+USE \Views\Wrapper;
 
 
 $router = new \Bramus\Router\Router();

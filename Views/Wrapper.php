@@ -1,5 +1,7 @@
 <?php
 
+namespace Views;
+
 class Wrapper {
     public function header($title) {
         ?>
