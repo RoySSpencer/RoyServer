@@ -2,20 +2,18 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 require_once "../Views/Wrapper.php";
+require_once "../Project1/ViewManager.php";
 
 
 $router = new \Bramus\Router\Router();
 
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
-$router->get('/about', function() {
-    echo 'About Page Contents';
-});
+$router->get('/P1', "project1");
 
 $router->run();
 
-function helloWorld() {
-
+function linkHeader() {
     ?>
     
     <!-- <head> -->
@@ -34,18 +32,39 @@ function helloWorld() {
     $(document).ready( function () {
         $('#table_id').DataTable();
     } );
-    </script>
 
+    
+    </script>
     </div>
     <?php
+}
+
+function helloWorld() {
+    linkHeader();
+
     $wrapper = new Wrapper();
     $wrapper->header("Roy Spencer -- Project List");
     $wrapper->bodyStart();
 
     $projects = array(
-        "test" => "<a href='/RoyServer/test'>test link</a>"
+        "Project 1" => "<a href='/RoyServer/P1'>Project1Link</a>"
     );
     ProjectTable($projects);
+
+    $wrapper->bodyEnd();
+    $wrapper->footer();
+}
+
+function project1() {
+
+    linkHeader();
+    $wrapper = new Wrapper();
+    $wrapper->header("Roy Spencer -- Project List");
+    $wrapper->bodyStart();
+
+    $viewManager = new ViewManager();
+
+    $viewManager.router($router);
 
     $wrapper->bodyEnd();
     $wrapper->footer();
