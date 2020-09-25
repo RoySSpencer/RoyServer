@@ -5,8 +5,8 @@ namespace Project1;
 class Warehouse{
 
     public function __construct() {
-        $servername = "'root'@'localhost'";
-        $username = "root";
+        $servername = "localhost";
+        $username = "phpmyadmin";
         $password = "password";
 
         // Create connection
