@@ -5,7 +5,7 @@ namespace Project1;
 class Warehouse{
 
     public function __construct() {
-        $servername = "localhost";
+        $servername = "'root'@'localhost'";
         $username = "root";
         $password = "password";
 
