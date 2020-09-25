@@ -64,7 +64,7 @@ function project1() {
 
     $viewManager = new ViewManager();
 
-    $viewManager.router();
+    $viewManager->router();
 
     $wrapper->bodyEnd();
     $wrapper->footer();
