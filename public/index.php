@@ -9,7 +9,7 @@ $router = new \Bramus\Router\Router();
 
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
-$router->setNamespace('\Project1');
+$router->setNamespace('\\Project1');
 $router->get('/P1', "ViewManager@router");
 
 $router->run();
