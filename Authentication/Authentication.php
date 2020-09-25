@@ -17,7 +17,7 @@ class Authentication {
             }
         } else {
             $this->getLoggin();
-        } 
+        }
 
         echo "not logged in";
 
@@ -26,9 +26,17 @@ class Authentication {
     }
 
     public function getLoggin() {
+        ?>
+        <form method="post">
+        <?php
+
         $this->input("username", "Username");
         $this->input("password", "Password");
-        $this->input("rePassword", "Re-Password");
+
+        $this->button();
+        ?>
+        </form>
+        <?php
     }
 
     public function input($id, $name) {
@@ -43,6 +51,15 @@ class Authentication {
             <div class="col-md-8">
                 <input type="text" id="<?=$id?>" name="<?=$id?>" style="width:100%">
             </div>
+
+        </div>
+        <?php
+    }
+
+    public function button($id, $name) {
+        ?>
+        <div class="row">
+            <button type="button">Submit</button>
 
         </div>
         <?php
