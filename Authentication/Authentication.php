@@ -26,15 +26,17 @@ class Authentication {
     }
 
     public function getLoggin() {
-        $this->input();
+        $this->input("username", "Username");
+        $this->input("password", "Password");
+        $this->input("rePassword", "Re-Password");
     }
 
-    public function input($id = "test") {
+    public function input($id, $name) {
         ?>
         <div class="row">
             <div class="col-md-4">
                 <label for="<?=$id?>">
-                    Username:
+                    <?=$name?>
                 </label>
             </div>
 
