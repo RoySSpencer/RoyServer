@@ -18,7 +18,7 @@ class Warehouse{
         } 
         echo "Connected successfully";
 
-        $conn->close();
+        // $conn->close();
     }
     
 }
