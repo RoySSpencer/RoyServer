@@ -6,7 +6,7 @@ class Warehouse{
 
     public function __construct() {
         $servername = "localhost";
-        $username = "roy";
+        $username = "root";
         $password = "password";
 
         // Create connection
