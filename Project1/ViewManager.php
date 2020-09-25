@@ -8,7 +8,7 @@ class ViewManager {
     public function router() {
 
         linkHeader();
-        // $wrapper = new Wrapper();
+        $wrapper = new Wrapper();
         // $wrapper->header("Roy Spencer -- Project List");
         // $wrapper->bodyStart();
 
