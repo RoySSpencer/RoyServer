@@ -10,13 +10,14 @@ $router = new \Bramus\Router\Router();
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
 $router->setNamespace('\\Project1');
-$router->get('/P1', "ViewManager@router");
+$router->match('GET|POST', '/P1', "ViewManager@router");
+// $router->get('/P1', "ViewManager@router");
 
 $router->run();
 
 function linkHeader() {
     ?>
-    
+
     <!-- <head> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -34,7 +35,7 @@ function linkHeader() {
         $('#table_id').DataTable();
     } );
 
-    
+
     </script>
     </div>
     <?php

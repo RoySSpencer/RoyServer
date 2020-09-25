@@ -59,8 +59,7 @@ class Authentication {
     public function button($id, $name) {
         ?>
         <div class="row">
-            <button type="submit" id="<?=$id?>">"<?=$name?>"</button>
-
+            <button type="submit" id="<?=$id?>"><?=$name?></button>
         </div>
         <?php
     }

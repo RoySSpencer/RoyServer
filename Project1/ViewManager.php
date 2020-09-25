@@ -19,15 +19,15 @@ class ViewManager {
         $wrapper->header("Roy Spencer -- Project List");
         $wrapper->bodyStart();
 
-        
+        var_dump($_POST);
         if ($this->Authentication->checkUser()){
             echo "hi";
         }
 
         $wrapper->bodyEnd();
         $wrapper->footer();
-        
-        
+
+
     }
 
 }
