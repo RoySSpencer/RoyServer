@@ -32,8 +32,12 @@ class ViewManager {
         if (isset($_SESSION['loggedIn'])){
             if ($this->db->checkLogin()){
                 return true;
+            } else {
+                echo "wrong username or password";
             }
         }
+
+        echo "not logged in";
 
         return false;
 
