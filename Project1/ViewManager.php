@@ -1,8 +1,8 @@
 <?php
 
-USE \Views\Wrapper;
-
 namespace Project1;
+
+USE \Views\Wrapper;
 
 class ViewManager {
     public function router() {
