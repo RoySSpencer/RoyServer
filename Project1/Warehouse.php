@@ -11,23 +11,28 @@ class Warehouse{
         $db = "Passwords";
 
         // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $db);
+        $this->conn = mysqli_connect($servername, $username, $password, $db);
+    }
 
-        $sql = "select * from Logins";
+    public function checkLogin() {
+        $sql = "select username, password from Logins";
 
         $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_row($result);
+        $rows = mysqli_fetch_row($result);
 
-        var_dump($row);
+        if (!isset($_SESSION['loggedIn']['username']) || !isset($_SESSION['loggedIn']['password'])) {
+            return false;
+        }
 
-        // Check connection
-        // if (!$conn) {
-        //     die("Connection failed: " . $conn->connect_error);
-        // } 
-        // echo "Connected successfully";
+        foreach($rows as $row) {
+            if ($row[0] == $_SESSION['loggedIn']['username'] && $row[1] == $_SESSION['loggedIn']['password']) {
+                return true;
+            }
+        }
 
-        // mysql_close($conn);
-        // $conn->close();
+        return false;
+
+        // var_dump($row);
     }
     
 }
