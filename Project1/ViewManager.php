@@ -13,7 +13,7 @@ class ViewManager {
         $wrapper->header("Roy Spencer -- Project List");
         $wrapper->bodyStart();
 
-        $db = new Warehouse();
+        // $db = new Warehouse();
         echo "hi";
 
         $wrapper->bodyEnd();
