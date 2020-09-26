@@ -58,9 +58,9 @@ class Authentication {
       $this->wrapper->nav(["/" => "Home", "/P1" => "Login"], $_SERVER['REQUEST_URI']);
       $this->wrapper->bodyStart();
 
-      if (isset($_POST)) {
-        $this->postHandler();
-      }
+      // if (isset($_POST)) {
+      //   $this->postHandler();
+      // }
 
       ?>
       <form method="post">
