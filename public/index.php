@@ -69,11 +69,7 @@ function loggout() {
 
   header("location: /");
 
-
-
   exit;
-
-  sleep ( 3 );
 }
 
 
