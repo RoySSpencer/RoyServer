@@ -22,7 +22,7 @@ class ViewManager {
       $this->start();
 
       if ($this->Authentication->checkUser()){
-          var_dump($this->db->getItems());
+          makeItemTable($this->db->getItems());
       }
 
       $this->end();
@@ -36,6 +36,27 @@ class ViewManager {
         if (isset($_POST['password'])) {
             $_SESSION['loggedIn']['password'] = $_POST['password'];
         }
+    }
+
+    public function makeItemTable($rows) {
+      ?>
+      <table id="table_id" class="display">
+          <thead>
+              <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+              </tr>
+          </thead>
+          <tbody>
+              <?php foreach($rows as $rowl): ?>
+              <tr>
+                  <td><?=$row["name"]?></td>
+                  <td><?=$row["quantity"]?></td>
+              </tr>
+              <?php endforeach; ?>
+          </tbody>
+      </table>
+      <?php
     }
 
     public function start() {
