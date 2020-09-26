@@ -20,6 +20,8 @@ class LogginDatabase{
         $result = mysqli_query($conn, $sql);
         $rows = mysqli_fetch_row($result);
 
+        var_dump($_SESSION);
+
         if (!isset($_SESSION['loggedIn']['username']) || !isset($_SESSION['loggedIn']['password'])) {
             return false;
         }
@@ -34,6 +36,6 @@ class LogginDatabase{
 
         // var_dump($row);
     }
-    
+
 }
 ?>
