@@ -65,7 +65,7 @@ function helloWorld() {
 function loggout() {
   // ob_start();
   unset($_SESSION['loggedIn']);
-  header("location: http://roy.roypi.test");
+  header("location: /");
   exit;
 }
 
