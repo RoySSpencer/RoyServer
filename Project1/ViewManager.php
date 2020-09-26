@@ -14,6 +14,8 @@ class ViewManager {
 
     public function dataPage() {
 
+        var_dump($_SESSION);
+
         linkHeader();
         $wrapper = new Wrapper();
         $wrapper->header("Roy Spencer -- Project 1");
