@@ -12,7 +12,7 @@ class Wrapper {
         <?php
     }
 
-    public function nav($options, $logout) {
+    public function nav($options, $current, $logout) {
         ?>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
@@ -23,7 +23,11 @@ class Wrapper {
             <ul class="navbar-nav">
               <?php foreach($options as $key=>$val): ?>
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?=$key?>"><?=$val?></a>
+                  <a class="nav-link" href="<?=$key?>"><?=$val?>
+                  <?php if($current == $val): ?>
+                  <span class="sr-only">(current)</span>
+                <?php endif;?>
+                  </a>
                 </li>
               <?php endforeach; ?>
             </ul>
