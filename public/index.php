@@ -16,7 +16,6 @@ $router->match('GET|POST', '/P1', "ViewManager@dataPage");
 // $router->get('/P1', "ViewManager@router");
 
 linkHeader();
-$wrapper = new Wrapper();
 
 $router->run();
 

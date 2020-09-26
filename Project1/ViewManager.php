@@ -10,6 +10,7 @@ class ViewManager {
     public function __construct() {
         $this->db = new Warehouse();
         $this->Authentication = new Authentication();
+        $this->wrapper = new Wrapper();
     }
 
     public function dataPage() {
@@ -38,13 +39,13 @@ class ViewManager {
     }
 
     public function start() {
-      $wrapper->header("Roy Spencer -- Project 1");
-      $wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], false);
-      $wrapper->bodyStart();
+      $this->wrapper->header("Roy Spencer -- Project 1");
+      $this->wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], false);
+      $this->wrapper->bodyStart();
     }
 
     public function end() {
-      $wrapper->bodyEnd();
-      $wrapper->footer();
+      $this->wrapper->bodyEnd();
+      $this->wrapper->footer();
     }
 }
