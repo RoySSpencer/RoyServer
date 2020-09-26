@@ -14,6 +14,8 @@ class ViewManager {
 
     public function dataPage() {
 
+        $this->start();
+
         if (isset($_POST)) {
           $this->postHandler();
         }
@@ -21,6 +23,8 @@ class ViewManager {
         if ($this->Authentication->checkUser()){
             echo "hi";
         }
+
+        $this->end();
 
     }
 
