@@ -16,11 +16,7 @@ class ViewManager {
 
         var_dump($_SESSION);
 
-        linkHeader();
-        $wrapper = new Wrapper();
-        $wrapper->header("Roy Spencer -- Project 1");
-        $wrapper->nav(["/P1" => "Home", "/" => "test"], "Home", false);
-        $wrapper->bodyStart();
+
 
         if (isset($_POST)) {
           $this->postHandler();
@@ -30,8 +26,7 @@ class ViewManager {
             echo "hi";
         }
 
-        $wrapper->bodyEnd();
-        $wrapper->footer();
+        
 
 
     }

@@ -15,7 +15,16 @@ $router->setNamespace('\\Project1');
 $router->match('GET|POST', '/P1', "ViewManager@dataPage");
 // $router->get('/P1', "ViewManager@router");
 
+linkHeader();
+$wrapper = new Wrapper();
+$wrapper->header("Roy Spencer -- Project 1");
+$wrapper->nav(["/P1" => "Home", "/" => "test"], "Home", false);
+$wrapper->bodyStart();
+
 $router->run();
+
+$wrapper->bodyEnd();
+$wrapper->footer();
 
 function linkHeader() {
     ?>
@@ -44,19 +53,19 @@ function linkHeader() {
 }
 
 function helloWorld() {
-    linkHeader();
-
-    $wrapper = new Wrapper();
-    $wrapper->header("Roy Spencer -- Project List");
-    $wrapper->bodyStart();
+    // linkHeader();
+    //
+    // $wrapper = new Wrapper();
+    // $wrapper->header("Roy Spencer -- Project List");
+    // $wrapper->bodyStart();
 
     $projects = array(
         "Project 1" => "<a href='/P1'>Project1Link</a>"
     );
     ProjectTable($projects);
 
-    $wrapper->bodyEnd();
-    $wrapper->footer();
+    // $wrapper->bodyEnd();
+    // $wrapper->footer();
 }
 
 
