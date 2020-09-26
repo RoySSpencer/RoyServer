@@ -12,14 +12,17 @@ class Authentication {
             if ($this->db->checkLogin()){
                 return true;
             } else {
-                $this->getLoggin();
-                echo "wrong username or password";
+              ?>
+              <div class="alert alert-danger" role="alert">
+                Wrong username or password!
+              </div>
+              <?php
+              $this->getLoggin();
+
             }
         } else {
             $this->getLoggin();
         }
-
-        echo "not logged in";
 
         return false;
 
