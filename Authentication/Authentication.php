@@ -2,6 +2,8 @@
 
 namespace Authentication;
 
+USE \Views\Wrapper;
+
 class Authentication {
     public function __construct() {
         $this->db = new LogginDatabase();
