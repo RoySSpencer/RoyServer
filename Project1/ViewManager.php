@@ -14,10 +14,6 @@ class ViewManager {
 
     public function dataPage() {
 
-        var_dump($_SESSION);
-
-
-
         if (isset($_POST)) {
           $this->postHandler();
         }
@@ -25,9 +21,6 @@ class ViewManager {
         if ($this->Authentication->checkUser()){
             echo "hi";
         }
-
-        
-
 
     }
 

@@ -20,7 +20,7 @@ class Wrapper {
               <?php foreach($options as $key=>$val): ?>
                 <li
                     class="nav-item active"
-                    <?php if($current == $val): ?>
+                    <?php if($current == $key): ?>
                        style="background-color: #222;"
                     <?php endif;?>
                 >
