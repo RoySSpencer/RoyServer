@@ -14,10 +14,12 @@ class ViewManager {
 
     public function dataPage() {
 
+        var_dump( $_SERVER['REQUEST_URI']);
+
         linkHeader();
         $wrapper = new Wrapper();
         $wrapper->header("Roy Spencer -- Project 1");
-        $wrapper->nav(["/P1" => "Home", "/P1/test" => "Test"]);
+        $wrapper->nav(["/P1" => "Home"]);
         $wrapper->bodyStart();
 
         if (isset($_POST)) {
