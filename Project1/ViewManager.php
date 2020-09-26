@@ -57,7 +57,7 @@ class ViewManager {
                   <td>
                     <form method="post">
                       <input type="text" id="increase" name="increase">
-                      <button class="submit-btn" type="submit" id="<?=$row["id"]?>" value="<?=$row["id"]?>">Add</button>
+                      <button class="submit-btn" type="submit" id="<?=$row["id"]?>" name="<?=$row["id"]?>" value="<?=$row["id"]?>">Add</button>
                     </form>
                   </td>
               </tr>
