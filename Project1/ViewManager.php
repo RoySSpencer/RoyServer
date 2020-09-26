@@ -6,6 +6,8 @@ USE \Views\Wrapper;
 USE \Project1\Warehouse;
 USE \Authentication\Authentication;
 
+//TODO: sign up, super-user edit, super-user new item, super-user login editing
+
 class ViewManager {
     public function __construct() {
         $this->db = new Warehouse();
@@ -30,7 +32,6 @@ class ViewManager {
     }
 
     public function postHandler() {
-      var_dump($_POST);
       if (isset($_POST['username'])) {
         $_SESSION['loggedIn']['username'] = $_POST['username'];
       }
@@ -49,7 +50,7 @@ class ViewManager {
               <tr>
                   <th>Item</th>
                   <th>Quantity</th>
-                  <th>Add Stock</th>
+                  <th style="width:30%">Add Stock</th>
               </tr>
           </thead>
           <tbody>

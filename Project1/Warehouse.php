@@ -32,18 +32,7 @@ class Warehouse{
       $increase = intval($increase);
       $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
 
-      echo $sql;
-
       $result = mysqli_query($this->conn, $sql);
-
-      // $rows = array();
-      //
-      // while($row = mysqli_fetch_assoc($result)) {
-      //     array_push($rows, $row);
-      // }
-      //
-      // return $rows;
-
     }
 
 }
