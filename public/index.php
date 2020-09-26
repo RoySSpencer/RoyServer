@@ -7,6 +7,8 @@ USE \Views\Wrapper;
 
 $router = new \Bramus\Router\Router();
 
+session_start();
+
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
 $router->setNamespace('\\Project1');
