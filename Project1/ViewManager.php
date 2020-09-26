@@ -30,12 +30,13 @@ class ViewManager {
     }
 
     public function postHandler() {
-        if (isset($_POST['username'])) {
-            $_SESSION['loggedIn']['username'] = $_POST['username'];
-        }
-        if (isset($_POST['password'])) {
-            $_SESSION['loggedIn']['password'] = $_POST['password'];
-        }
+      var_dump($_POST);
+      if (isset($_POST['username'])) {
+          $_SESSION['loggedIn']['username'] = $_POST['username'];
+      }
+      if (isset($_POST['password'])) {
+          $_SESSION['loggedIn']['password'] = $_POST['password'];
+      }
     }
 
     public function makeItemTable($rows) {
@@ -45,6 +46,7 @@ class ViewManager {
               <tr>
                   <th>Item</th>
                   <th>Quantity</th>
+                  <th>Add Stock</th>
               </tr>
           </thead>
           <tbody>
@@ -52,6 +54,12 @@ class ViewManager {
               <tr>
                   <td><?=$row["name"]?></td>
                   <td><?=$row["quantity"]?></td>
+                  <td>
+                    <form method="post">
+                      <input type="text" id="increase" name="increase">
+                      <button class="submit-btn" type="submit" id="<?=$row["id"]?>">Add</button>
+                    </form>
+                  </td>
               </tr>
               <?php endforeach; ?>
           </tbody>
