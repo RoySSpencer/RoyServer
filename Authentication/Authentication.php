@@ -18,7 +18,7 @@ class Authentication {
               </div>
               <?php
               $this->getLoggin();
-
+              unset($_SESSION['loggedIn']);
             }
         } else {
             $this->getLoggin();
