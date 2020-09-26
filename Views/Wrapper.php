@@ -14,7 +14,7 @@ class Wrapper {
 
     public function nav($options, $current, $logout) {
         ?>
-        <nav class="navbar navbar-expand-lg" style="background-color: #333; padding=0px;">
+        <nav class="navbar navbar-expand-lg" style="background-color: #333; padding:0px;">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
