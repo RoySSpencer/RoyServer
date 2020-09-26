@@ -17,12 +17,13 @@ class ViewManager {
         linkHeader();
         $wrapper = new Wrapper();
         $wrapper->header("Roy Spencer -- Project 1");
+        $wrapper->nav(["/P1/test" => "Test"]);
         $wrapper->bodyStart();
 
         if (isset($_POST)) {
           $this->postHandler();
         }
-        
+
         if ($this->Authentication->checkUser()){
             echo "hi";
         }

@@ -15,27 +15,21 @@ class LogginDatabase{
     }
 
     public function checkLogin() {
-        $sql = "select username, password from Logins";
-
-        $result = mysqli_query($this->conn, $sql);
-        // $rows = mysqli_fetch_row($result);
-
-        var_dump($_SESSION);
-
         if (!isset($_SESSION['loggedIn']['username']) || !isset($_SESSION['loggedIn']['password'])) {
             return false;
         }
 
+        $sql = "select username, password from Logins";
+
+        $result = mysqli_query($this->conn, $sql);
+
         while($row = mysqli_fetch_assoc($result)) {
-          var_dump($row);
             if ($row['username'] == $_SESSION['loggedIn']['username'] && $row['password'] == $_SESSION['loggedIn']['password']) {
                 return true;
             }
         }
 
         return false;
-
-        // var_dump($row);
     }
 
 }
