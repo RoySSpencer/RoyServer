@@ -67,6 +67,7 @@ function loggout() {
   unset($_SESSION['loggedIn']);
   header("Refresh:5; location: /");
 
+  $wrapper = new Wrapper();
   $wrapper->header("Loggout Successful");
 
 
