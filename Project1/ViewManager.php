@@ -37,9 +37,9 @@ class ViewManager {
       if (isset($_POST['password'])) {
         $_SESSION['loggedIn']['password'] = $_POST['password'];
       }
-      if (isset($_POST['increase']) && isset($_POST['itemId']) && is_int($_POST['increase'])) {
-        $this->db->addStock(isset($_POST['itemId'], $_POST['increase']);
-      }
+      // if (isset($_POST['increase']) && isset($_POST['itemId']) && is_int($_POST['increase'])) {
+      //   $this->db->addStock(isset($_POST['itemId'], $_POST['increase']);
+      // }
     }
 
     public function makeItemTable($rows) {
