@@ -14,7 +14,7 @@ class Wrapper {
 
     public function nav($options, $current, $logout) {
         ?>
-        <nav class="navbar navbar-expand-lg" style="background-color: black;">
+        <nav class="navbar navbar-expand-lg" style="background-color: #333;">
           <!-- <a class="navbar-brand" href="#">Navbar</a> -->
           <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@ class Wrapper {
             <ul class="navbar-nav">
               <?php foreach($options as $key=>$val): ?>
                 <li class="nav-item active">
-                  <a class="nav-link" href="<?=$key?>" style="color:color: whitesmoke;"><?=$val?>
+                  <a class="nav-link" href="<?=$key?>" style="color: whitesmoke;"><?=$val?>
                   <?php if($current == $val): ?>
                   <span class="sr-only">(current)</span>
                 <?php endif;?>
