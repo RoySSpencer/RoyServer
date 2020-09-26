@@ -12,14 +12,17 @@ class ViewManager {
         $this->Authentication = new Authentication();
     }
 
-    public function router() {
+    public function dataPage() {
 
         linkHeader();
         $wrapper = new Wrapper();
-        $wrapper->header("Roy Spencer -- Project List");
+        $wrapper->header("Roy Spencer -- Project 1");
         $wrapper->bodyStart();
 
-        var_dump($_POST);
+        if (isset($_POST)) {
+          $this->postHandler();
+        }
+        
         if ($this->Authentication->checkUser()){
             echo "hi";
         }
@@ -30,4 +33,12 @@ class ViewManager {
 
     }
 
+    public function postHandler() {
+        if (isset($_POST['username'])) {
+            $_SESSION['loggedIn']['username'] = $_POST['username'];
+        }
+        if (isset($_POST['password'])) {
+            $_SESSION['loggedIn']['password'] = $_POST['password'];
+        }
+    }
 }

@@ -10,7 +10,7 @@ $router = new \Bramus\Router\Router();
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
 $router->setNamespace('\\Project1');
-$router->match('GET|POST', '/P1', "ViewManager@router");
+$router->match('GET|POST', '/P1', "ViewManager@dataPage");
 // $router->get('/P1', "ViewManager@router");
 
 $router->run();
