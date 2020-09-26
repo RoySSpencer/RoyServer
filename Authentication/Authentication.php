@@ -43,10 +43,10 @@ class Authentication {
         <?php
 
         ?>
-        <div class="row input-row">
+        <!-- <div class="row input-row">
             <a href="/sign-up"></a>
 
-        </div>
+        </div> -->
         <?php
     }
 
