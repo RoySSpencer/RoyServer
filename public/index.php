@@ -12,9 +12,9 @@ session_start();
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
 $router->get('/loggout', "loggout");
-$router->setNamespace('\\Project1');
-$router->match('GET|POST', '/P1', "ViewManager@dataPage");
-$router->match('GET|POST', '/sign-up', "..\\Authentication\\Authentication@signup");
+// $router->setNamespace('\\Project1');
+$router->match('GET|POST', '/P1', "\\Project1\\ViewManager@dataPage");
+$router->match('GET|POST', '/sign-up', "\\Authentication\\Authentication@signup");
 // $router->get('/P1', "ViewManager@router");
 
 linkHeader();
