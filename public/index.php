@@ -68,7 +68,7 @@ function loggout() {
   $wrapper = new Wrapper();
   $wrapper->header("Loggout Successful");
 
-  header("Refresh:5; location: /");
+  header("Refresh:5; url: /");
   exit;
 }
 
