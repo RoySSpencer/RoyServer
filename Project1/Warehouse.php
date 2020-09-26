@@ -28,21 +28,21 @@ class Warehouse{
         return $rows;
     }
 
-    public funtion addStock($id, $increase) {
-      $increase = intval($increase);
-      $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
-
-      // $result = mysqli_query($this->conn, $sql);
-
-      // $rows = array();
-      //
-      // while($row = mysqli_fetch_assoc($result)) {
-      //     array_push($rows, $row);
-      // }
-      //
-      // return $rows;
-
-    }
+    // public funtion addStock($id, $increase) {
+    //   $increase = intval($increase);
+    //   $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
+    //
+    //   // $result = mysqli_query($this->conn, $sql);
+    //
+    //   // $rows = array();
+    //   //
+    //   // while($row = mysqli_fetch_assoc($result)) {
+    //   //     array_push($rows, $row);
+    //   // }
+    //   //
+    //   // return $rows;
+    //
+    // }
 
 }
 ?>
