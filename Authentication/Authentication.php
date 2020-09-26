@@ -55,15 +55,19 @@ class Authentication {
 
     public function signup() {
       $this->wrapper->header("Sign-up");
-      $this->wrapper->nav(["/" => "Home"], $_SERVER['REQUEST_URI']);
+      $this->wrapper->nav(["/" => "Home", "/P1" => "Login"], $_SERVER['REQUEST_URI']);
       $this->wrapper->bodyStart();
+
+      if (isset($_POST)) {
+        this->postHandler();
+      }
 
       ?>
       <form method="post">
       <?php
-      $this->input("username", "Username");
-      $this->input("password", "Password");
-      $this->input("repassword", "Re-Password");
+      $this->input("newUsername", "Username");
+      $this->input("newPassword", "Password");
+      $this->input("newRepassword", "Re-Password");
 
       $this->button("sign-in", "Submit");
       ?>
@@ -81,6 +85,33 @@ class Authentication {
       if (isset($_POST['password'])) {
         $_SESSION['loggedIn']['password'] = $_POST['password'];
         unset( $_POST['password']);
+      }
+      if (isset($_POST['newUsername']) || isset($_POST['newPassword']) || isset($_POST['newRepassword'])) {
+        $this->newAccount();
+      }
+    }
+
+    public function newAccount() {
+      if (isset($_POST['newUsername']) && isset($_POST['newPassword']) && isset($_POST['newRepassword'])) {
+        if ($_POST['newPassword'] == $_POST['newRepassword']) {
+          $this->db->createAcount($_POST['newUsername'], $_POST['newPassword']);
+          unset($_POST['newUsername']);
+          unset($_POST['newPassword']);
+          unset($_POST['newRepassword']);
+
+          header("location: /");
+
+          exit;
+        }
+        else {
+          unset($_POST['newUsername']);
+          unset($_POST['newPassword']);
+          unset($_POST['newRepassword']);
+
+          header("location: /sign-up");
+
+          exit;
+        }
       }
     }
 
