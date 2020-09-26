@@ -32,4 +32,15 @@ class ViewManager {
             $_SESSION['loggedIn']['password'] = $_POST['password'];
         }
     }
+
+    public function start() {
+      $wrapper->header("Roy Spencer -- Project 1");
+      $wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], false);
+      $wrapper->bodyStart();
+    }
+
+    public function end() {
+      $wrapper->bodyEnd();
+      $wrapper->footer();
+    }
 }
