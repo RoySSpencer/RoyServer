@@ -44,7 +44,7 @@ class Authentication {
 
         ?>
         <div class="row input-row">
-            <a href="/sign-up"></a>
+            <a href="/sign-up">Sign-up</a>
 
         </div>
         <?php
