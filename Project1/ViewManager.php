@@ -15,17 +15,17 @@ class ViewManager {
 
     public function dataPage() {
 
-        $this->start();
+      if (isset($_POST)) {
+        $this->postHandler();
+      }
 
-        if (isset($_POST)) {
-          $this->postHandler();
-        }
+      $this->start();
 
-        if ($this->Authentication->checkUser()){
-            echo "hi"; //Actual data
-        }
+      if ($this->Authentication->checkUser()){
+          echo "hi"; //Actual data
+      }
 
-        $this->end();
+      $this->end();
 
     }
 

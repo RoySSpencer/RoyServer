@@ -64,7 +64,7 @@ function helloWorld() {
 
 function loggout() {
   unset($_SESSION['loggedIn']);
-  header('/');
+  header($_SERVER['DOCUMENT_ROOT']);
 }
 
 
