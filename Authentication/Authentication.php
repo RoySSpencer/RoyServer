@@ -59,7 +59,7 @@ class Authentication {
       $this->wrapper->bodyStart();
 
       if (isset($_POST)) {
-        this->postHandler();
+        $this->postHandler();
       }
 
       ?>
@@ -103,16 +103,14 @@ class Authentication {
 
           exit;
         }
-        else {
-          unset($_POST['newUsername']);
-          unset($_POST['newPassword']);
-          unset($_POST['newRepassword']);
-
-          header("location: /sign-up");
-
-          exit;
-        }
       }
+      unset($_POST['newUsername']);
+      unset($_POST['newPassword']);
+      unset($_POST['newRepassword']);
+
+      header("location: /sign-up");
+
+      exit;
     }
 
     public function input($id, $name) {
