@@ -43,14 +43,14 @@ class Authentication {
         <?php
 
         ?>
-        <!-- <div class="row input-row">
+        <div class="row input-row">
             <a href="/sign-up"></a>
 
-        </div> -->
+        </div>
         <?php
     }
 
-    public function getLoggin() {
+    public function signup() {
         ?>
         <h4>Sign-up</h4>
         <?php
