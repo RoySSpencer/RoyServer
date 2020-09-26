@@ -26,7 +26,7 @@ class LogginDatabase{
             return false;
         }
 
-        while($row = mysqli_fetch_assoc($result)) {
+        while($row = mysqli_fetch_row($result)) {
           var_dump($row);
             if ($row[0] == $_SESSION['loggedIn']['username'] && $row[1] == $_SESSION['loggedIn']['password']) {
                 return true;
