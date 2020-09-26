@@ -30,6 +30,7 @@ class Authentication {
 
     public function getLoggin() {
         ?>
+        <h4>Log in</h4>
         <form method="post">
         <?php
 
