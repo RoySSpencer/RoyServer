@@ -43,7 +43,6 @@ class ViewManager {
       $loggedIn = false;
       if (isset($_SESSION['loggedIn'])) {
         $loggedIn = true;
-        echo "hi";
       }
       $this->wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], $loggedIn);
       $this->wrapper->bodyStart();

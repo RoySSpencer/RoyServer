@@ -11,6 +11,7 @@ session_start();
 
 // $router->get('/', "helloWorld");
 $router->get('/', "helloWorld");
+$router->get('/loggout', "loggout");
 $router->setNamespace('\\Project1');
 $router->match('GET|POST', '/P1', "ViewManager@dataPage");
 // $router->get('/P1', "ViewManager@router");
@@ -59,6 +60,11 @@ function helloWorld() {
 
     $wrapper->bodyEnd();
     $wrapper->footer();
+}
+
+function loggout() {
+  unset($_SESSION['loggedIn']);
+  header('/');
 }
 
 
