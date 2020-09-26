@@ -27,6 +27,7 @@ class LogginDatabase{
         }
 
         foreach($rows as $row) {
+          var_dump($row);
             if ($row[0] == $_SESSION['loggedIn']['username'] && $row[1] == $_SESSION['loggedIn']['password']) {
                 return true;
             }
