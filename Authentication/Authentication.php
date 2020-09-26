@@ -5,6 +5,7 @@ namespace Authentication;
 class Authentication {
     public function __construct() {
         $this->db = new LogginDatabase();
+        $this->wrapper = new Wrapper();
     }
 
     public function checkUser() {
@@ -51,9 +52,23 @@ class Authentication {
     }
 
     public function signup() {
-        ?>
-        <h4>Sign-up</h4>
-        <?php
+      $this->wrapper->header("Sign-up");
+      $this->wrapper->nav(["/" => "Home"], $_SERVER['REQUEST_URI']);
+      $this->wrapper->bodyStart();
+
+      ?>
+      <form method="post">
+      <?php
+      $this->input("username", "Username");
+      $this->input("password", "Password");
+      $this->input("repassword", "Re-Password");
+
+      $this->button("sign-in", "Submit");
+      ?>
+      </form>
+      <?php
+
+      $this->wrapper->bodyEnd();
     }
 
     public function postHandler() {

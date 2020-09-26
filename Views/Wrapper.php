@@ -12,7 +12,7 @@ class Wrapper {
         <?php
     }
 
-    public function nav($options, $current, $logout) {
+    public function nav($options, $current, $logout = false) {
         ?>
         <nav class="navbar navbar-expand-lg" style="background-color: #333; padding:0px;">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
