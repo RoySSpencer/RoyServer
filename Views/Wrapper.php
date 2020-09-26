@@ -27,6 +27,10 @@ class Wrapper {
                   <a class="nav-link" href="<?=$key?>" style="color: whitesmoke; padding: 10px 25px;"><?=$val?></a>
                 </li>
               <?php endforeach; ?>
+              <ul class="nav navbar-nav navbar-right">
+                <?php if($logout): ?>
+                     <li><a href="/loggout">Loggout</a></li>
+                <?php endif;?>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <?php if($logout): ?>
