@@ -29,10 +29,10 @@ class Warehouse{
     }
 
     public function addStock($id, $increase) {
-      // $increase = intval($increase);
-      // $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
+      $increase = intval($increase);
+      $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
 
-      // $result = mysqli_query($this->conn, $sql);
+      $result = mysqli_query($this->conn, $sql);
 
       // $rows = array();
       //
