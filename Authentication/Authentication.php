@@ -30,7 +30,7 @@ class Authentication {
 
     public function getLoggin() {
         ?>
-        <h4>Log in</h4>
+        <h4 style="margin-bottom: 2em;">Log in</h4>
         <form method="post">
         <?php
 
@@ -40,6 +40,19 @@ class Authentication {
         $this->button("sign-in", "Submit");
         ?>
         </form>
+        <?php
+
+        ?>
+        <div class="row input-row">
+            <a href="/sign-up"></a>
+
+        </div>
+        <?php
+    }
+
+    public function getLoggin() {
+        ?>
+        <h4>Sign-up</h4>
         <?php
     }
 

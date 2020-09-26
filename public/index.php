@@ -14,6 +14,8 @@ $router->get('/', "helloWorld");
 $router->get('/loggout', "loggout");
 $router->setNamespace('\\Project1');
 $router->match('GET|POST', '/P1', "ViewManager@dataPage");
+$router->setNamespace('\\Authentication');
+$router->match('GET|POST', '/sign-up', "Authentication@signup");
 // $router->get('/P1', "ViewManager@router");
 
 linkHeader();

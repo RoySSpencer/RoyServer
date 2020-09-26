@@ -6,7 +6,7 @@ USE \Views\Wrapper;
 USE \Project1\Warehouse;
 USE \Authentication\Authentication;
 
-//TODO: remove session data if incorrect log in, sign up, super-user edit, super-user new item, super-user login editing
+//TODO: sign up, super-user edit, super-user new item, super-user login editing
 
 class ViewManager {
     public function __construct() {
@@ -37,6 +37,8 @@ class ViewManager {
     public function postHandler() {
       if (isset($_POST['increase']) && isset($_POST['itemId']) && is_numeric($_POST['increase'])) {
         $this->db->addStock($_POST['itemId'], $_POST['increase']);
+        unset($_POST['itemId']);
+        unset($_POST['increase']);
       }
     }
 
