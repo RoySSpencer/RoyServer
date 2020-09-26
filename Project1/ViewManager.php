@@ -17,7 +17,7 @@ class ViewManager {
         linkHeader();
         $wrapper = new Wrapper();
         $wrapper->header("Roy Spencer -- Project 1");
-        $wrapper->nav(["/P1/test" => "Test"]);
+        $wrapper->nav(["/P1" => "Home", "/P1/test" => "Test"]);
         $wrapper->bodyStart();
 
         if (isset($_POST)) {
