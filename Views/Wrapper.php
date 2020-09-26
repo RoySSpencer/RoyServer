@@ -28,6 +28,12 @@ class Wrapper {
                 </li>
               <?php endforeach; ?>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <?php if($logout): ?>
+                   <li><a href="/loggout">Loggout</a></li>
+              <?php endif;?>
+
+            </ul>
           </div>
         </nav>
         <?php

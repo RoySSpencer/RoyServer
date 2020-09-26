@@ -22,7 +22,7 @@ class ViewManager {
         }
 
         if ($this->Authentication->checkUser()){
-            echo "hi";
+            echo "hi"; //Actual data
         }
 
         $this->end();
@@ -40,7 +40,11 @@ class ViewManager {
 
     public function start() {
       $this->wrapper->header("Roy Spencer -- Project 1");
-      $this->wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], false);
+      $loggedIn = false;
+      if (isset($_SESSION['loggedIn'])) {
+        $loggedIn = true;
+      }
+      $this->wrapper->nav(["/" => "Home", "/P1" => "Data"], $_SERVER['REQUEST_URI'], $loggedIn);
       $this->wrapper->bodyStart();
     }
 
