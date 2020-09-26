@@ -48,7 +48,7 @@ class ViewManager {
               </tr>
           </thead>
           <tbody>
-              <?php foreach($rows as $rowl): ?>
+              <?php foreach($rows as $row): ?>
               <tr>
                   <td><?=$row["name"]?></td>
                   <td><?=$row["quantity"]?></td>
