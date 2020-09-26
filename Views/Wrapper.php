@@ -16,6 +16,7 @@ class Wrapper {
         ?>
         <nav class="navbar navbar-expand-lg" style="background-color: #333; padding:0px;">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="container-fluid">
             <ul class="navbar-nav">
               <?php foreach($options as $key=>$val): ?>
                 <li
@@ -34,6 +35,7 @@ class Wrapper {
               <?php endif;?>
 
             </ul>
+          </div>
           </div>
         </nav>
         <?php
