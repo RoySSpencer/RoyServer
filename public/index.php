@@ -16,9 +16,11 @@ $router->match('GET|POST', '/P1', "ViewManager@dataPage");
 // $router->get('/P1', "ViewManager@router");
 
 linkHeader();
+var_dump($_SERVER['REQUEST_URI']);
+
 $wrapper = new Wrapper();
 $wrapper->header("Roy Spencer -- Project 1");
-$wrapper->nav(["/P1" => "Home", "/" => "test"], "Home", false);
+$wrapper->nav(["/P1" => "Home", "/" => "test"], $_SERVER['REQUEST_URI'], false);
 $wrapper->bodyStart();
 
 $router->run();
