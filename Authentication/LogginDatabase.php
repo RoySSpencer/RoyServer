@@ -33,7 +33,7 @@ class LogginDatabase{
     }
 
     public function createAcount($username, $password) {
-      $sql = "insert into Logins (username, password, type) values (".$username.", ".$password.", user)";
+      $sql = "insert into Logins (username, password, type) values ('".$username."', '".$password."', 'user')";
 
       var_dump($sql);
 
