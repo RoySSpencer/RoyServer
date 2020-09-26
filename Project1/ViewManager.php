@@ -22,7 +22,7 @@ class ViewManager {
       $this->start();
 
       if ($this->Authentication->checkUser()){
-          makeItemTable($this->db->getItems());
+          $this->makeItemTable($this->db->getItems());
       }
 
       $this->end();
