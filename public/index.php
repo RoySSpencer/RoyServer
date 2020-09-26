@@ -65,10 +65,10 @@ function helloWorld() {
 function loggout() {
   // ob_start();
   unset($_SESSION['loggedIn']);
-  header("Refresh:5; location: /");
-
   $wrapper = new Wrapper();
   $wrapper->header("Loggout Successful");
+  
+  header("Refresh:5; location: /");
 
 
   exit;
