@@ -22,11 +22,14 @@ class Wrapper {
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <?php foreach($options as $key=>$val): ?>
-                <li class="nav-item active">
-                  <a class="nav-link" href="<?=$key?>" style="color: whitesmoke;"><?=$val?>
-                  <?php if($current == $val): ?>
-                  <span class="sr-only">(current)</span>
-                <?php endif;?>
+                <li
+                    class="nav-item active"
+                    <?php if($current == $val): ?>
+                            style="background-color: #222;"
+                    <?php endif;?>
+                >
+                  <a class="nav-link" href="<?=$key?>" style="color: whitesmoke; padding: 10px 25px;"><?=$val?>
+
                   </a>
                 </li>
               <?php endforeach; ?>
