@@ -17,7 +17,7 @@ class LogginDatabase{
     public function checkLogin() {
         $sql = "select username, password from Logins";
 
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($this->conn, $sql);
         $rows = mysqli_fetch_row($result);
 
         var_dump($rows);
