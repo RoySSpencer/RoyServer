@@ -1,6 +1,6 @@
 #header {
-    background-color:#82002f; 
-    color:whitesmoke; 
+    background-color:#82002f;
+    color:whitesmoke;
     padding:15px 25px;
 }
 
@@ -27,4 +27,17 @@ body {
     background-color: #005252;
     color: whitesmoke;
     text-align: center;
+}
+
+.input-row {
+    margin-bottom: 1em;
+}
+
+.btn-row {
+    justify-content: center;
+}
+
+.submit-btn {
+    background-color:#82002f;
+    color:whitesmoke;
 }

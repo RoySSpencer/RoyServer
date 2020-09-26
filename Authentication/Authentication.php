@@ -41,7 +41,7 @@ class Authentication {
 
     public function input($id, $name) {
         ?>
-        <div class="row">
+        <div class="row input-row">
             <div class="col-md-4">
                 <label for="<?=$id?>">
                     <?=$name?>
@@ -58,8 +58,8 @@ class Authentication {
 
     public function button($id, $name) {
         ?>
-        <div class="row">
-            <button type="submit" id="<?=$id?>"><?=$name?></button>
+        <div class="row btn-row">
+            <button class="submit-btn" type="submit" id="<?=$id?>"><?=$name?></button>
         </div>
         <?php
     }
