@@ -17,7 +17,7 @@ class LogginDatabase{
     public function checkLogin() {
         $sql = "select username, password from Logins";
 
-        $result = mysqli_query($conn, $sql);
+        $result = mysqli_query($this->conn, $sql);
         // $rows = mysqli_fetch_row($result);
 
         var_dump($_SESSION);
@@ -26,7 +26,7 @@ class LogginDatabase{
             return false;
         }
 
-        while($row = mysqli_fetch_row($result)) {
+        while($row = mysqli_fetch_assoc($result)) {
           var_dump($row);
             if ($row[0] == $_SESSION['loggedIn']['username'] && $row[1] == $_SESSION['loggedIn']['password']) {
                 return true;
