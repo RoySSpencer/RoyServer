@@ -86,9 +86,9 @@ class Authentication {
         $_SESSION['loggedIn']['password'] = $_POST['password'];
         unset( $_POST['password']);
       }
-      if (isset($_POST['newUsername']) || isset($_POST['newPassword']) || isset($_POST['newRepassword'])) {
-        // $this->newAccount();
-      }
+      // if (isset($_POST['newUsername']) || isset($_POST['newPassword']) || isset($_POST['newRepassword'])) {
+      //   // $this->newAccount();
+      // }
     }
 
     // public function newAccount() {
