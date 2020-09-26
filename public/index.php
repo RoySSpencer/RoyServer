@@ -65,7 +65,11 @@ function helloWorld() {
 function loggout() {
   // ob_start();
   unset($_SESSION['loggedIn']);
-  header("location: /");
+  header("Refresh:5; location: /");
+
+  $wrapper->header("Loggout Successful");
+
+
   exit;
 }
 
