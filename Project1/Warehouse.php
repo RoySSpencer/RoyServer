@@ -8,32 +8,25 @@ class Warehouse{
         $servername = "localhost";
         $username = "roy";
         $password = "toyroy";
-        $db = "Passwords";
+        $db = "online_ordering";
 
         // Create connection
         $this->conn = mysqli_connect($servername, $username, $password, $db);
     }
 
-    public function checkLogin() {
-        $sql = "select username, password from Logins";
+    public function getItems() {
+        $sql = "select * from items";
 
-        $result = mysqli_query($conn, $sql);
-        $rows = mysqli_fetch_row($result);
+        $result = mysqli_query($this->conn, $sql);
 
-        if (!isset($_SESSION['loggedIn']['username']) || !isset($_SESSION['loggedIn']['password'])) {
-            return false;
+        $rows = array();
+
+        while($row = mysqli_fetch_assoc($result)) {
+            array_push($rows, $row);
         }
 
-        foreach($rows as $row) {
-            if ($row[0] == $_SESSION['loggedIn']['username'] && $row[1] == $_SESSION['loggedIn']['password']) {
-                return true;
-            }
-        }
-
-        return false;
-
-        // var_dump($row);
+        return $rows;
     }
-    
+
 }
 ?>

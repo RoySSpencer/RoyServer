@@ -22,7 +22,7 @@ class ViewManager {
       $this->start();
 
       if ($this->Authentication->checkUser()){
-          echo "hi"; //Actual data
+          var_dump($this->db->getItems());
       }
 
       $this->end();

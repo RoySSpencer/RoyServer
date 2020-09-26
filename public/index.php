@@ -63,14 +63,13 @@ function helloWorld() {
 }
 
 function loggout() {
-  // ob_start();
   unset($_SESSION['loggedIn']);
   $wrapper = new Wrapper();
   $wrapper->header("Loggout Successful");
-  sleep ( 5 );
-  
+
   header("location: /");
 
+  sleep ( 3 );
 
   exit;
 }
