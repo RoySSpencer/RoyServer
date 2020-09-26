@@ -42,11 +42,11 @@ class Authentication {
     public function handlePost() {
       if (isset($_POST['username'])) {
         $_SESSION['loggedIn']['username'] = $_POST['username'];
-        unset( $_POST['username']);
+        // unset( $_POST['username']);
       }
       if (isset($_POST['password'])) {
         $_SESSION['loggedIn']['password'] = $_POST['password'];
-        unset( $_POST['password']);
+        // unset( $_POST['password']);
       }
     }
 
