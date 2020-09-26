@@ -94,14 +94,16 @@ class Authentication {
     public function newAccount() {
       if (isset($_POST['newUsername']) && isset($_POST['newPassword']) && isset($_POST['newRepassword'])) {
         if ($_POST['newPassword'] == $_POST['newRepassword']) {
+
           $this->db->createAcount($_POST['newUsername'], $_POST['newPassword']);
+
           unset($_POST['newUsername']);
           unset($_POST['newPassword']);
           unset($_POST['newRepassword']);
 
-          header("location: /");
-
-          exit;
+          // header("location: /");
+          //
+          // exit;
         }
       }
       unset($_POST['newUsername']);

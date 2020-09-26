@@ -35,6 +35,8 @@ class LogginDatabase{
     public function createAcount($username, $password) {
       $sql = "insert into Logins (username, password, type) values (".$username.", ".$password.", user)";
 
+      var_dump($sql);
+
       $result = mysqli_query($this->conn, $sql);
     }
 
