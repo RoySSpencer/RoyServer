@@ -101,9 +101,9 @@ class Authentication {
           unset($_POST['newPassword']);
           unset($_POST['newRepassword']);
 
-          // header("location: /");
-          //
-          // exit;
+          header("location: /");
+
+          exit;
         }
       }
       unset($_POST['newUsername']);

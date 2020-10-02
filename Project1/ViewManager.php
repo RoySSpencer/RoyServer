@@ -6,7 +6,7 @@ USE \Views\Wrapper;
 USE \Project1\Warehouse;
 USE \Authentication\Authentication;
 
-//TODO: sign up, super-user edit, super-user new item, super-user login editing
+//TODO: super-user edit, super-user new item, super-user login editing
 
 class ViewManager {
     public function __construct() {
