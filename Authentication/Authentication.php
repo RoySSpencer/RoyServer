@@ -38,7 +38,7 @@ class Authentication {
         <?php
 
         $this->input("username", "Username");
-        $this->input("password", "Password");
+        $this->password("password", "Password");
 
         $this->button("sign-in", "Submit");
         ?>
@@ -66,8 +66,8 @@ class Authentication {
       <form method="post">
       <?php
       $this->input("newUsername", "Username");
-      $this->input("newPassword", "Password");
-      $this->input("newRepassword", "Re-Password");
+      $this->password("newPassword", "Password");
+      $this->password("newRepassword", "Re-Password");
 
       $this->button("sign-in", "Submit");
       ?>
@@ -126,6 +126,23 @@ class Authentication {
 
             <div class="col-md-8">
                 <input type="text" id="<?=$id?>" name="<?=$id?>" style="width:100%">
+            </div>
+
+        </div>
+        <?php
+    }
+
+    public function password($id, $name) {
+        ?>
+        <div class="row input-row">
+            <div class="col-md-4">
+                <label for="<?=$id?>">
+                    <?=$name?>
+                </label>
+            </div>
+
+            <div class="col-md-8">
+                <input type="password" id="<?=$id?>" name="<?=$id?>" style="width:100%">
             </div>
 
         </div>
