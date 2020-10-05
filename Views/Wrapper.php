@@ -31,7 +31,7 @@ class Wrapper {
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <?php if($logout): ?>
-                     <li><a href="/loggout" style="color: whitesmoke; padding: 10px 25px;">Loggout</a></li>
+                     <li><a href="/loggout" style="color: whitesmoke; padding: 10px 25px;">Logout</a></li>
                 <?php endif;?>
 
               </ul>
