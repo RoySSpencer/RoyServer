@@ -37,7 +37,7 @@ class LogginDatabase{
       $stmt = mysqli_prepare($this->conn, $sql);
       mysqli_stmt_bind_param($stmt, 's', $username);
       mysqli_execute($stmt);
-      var_dump(mysqli_get_result());
+      var_dump(mysqli_stmt_get_result());
 
       $sql = "insert into Logins (username, password, type) values (?, ?, 'user')";
       $stmt = mysqli_prepare($this->conn, $sql);
