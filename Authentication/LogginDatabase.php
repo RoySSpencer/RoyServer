@@ -33,7 +33,7 @@ class LogginDatabase{
     }
 
     public function createAcount($username, $password) {
-      $sql = "insert into Logins (username, password, type) values ('".$username."', '".$password."', 'user')";
+      $sql = "insert into Logins (username, password, type) values (?, ?, 'user')";
       $stmt = mysqli_prepare($this->conn, $sql);
       mysqli_bind_param($stmt, array(MYSQLI_BIND_STRING, MYSQLI_BIND_STRING), $username, $password);
 
