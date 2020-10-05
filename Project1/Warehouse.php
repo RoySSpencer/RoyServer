@@ -30,9 +30,18 @@ class Warehouse{
 
     public function addStock($id, $increase) {
       $increase = intval($increase);
-      $sql = "update items set quantity = quantity + ".$increase." where id = ".$id;
+      $sql = "update items set quantity = quantity + ? where id = ?";
 
-      $result = mysqli_query($this->conn, $sql);
+      // $result = mysqli_query($this->conn, $sql);
+      //
+      // $sql = "insert into Logins (username, password, type) values (?, ?, 'user')";
+      $stmt = mysqli_prepare($this->conn, $sql);
+      mysqli_stmt_bind_param($stmt, 'ii', $increase, $id);
+
+      // var_dump($sql);
+
+      mysqli_execute($stmt);
+
     }
 
 }
